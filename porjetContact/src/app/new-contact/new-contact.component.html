@@ -1,0 +1,100 @@
+<div class="container spacer">
+
+    <div class="card card-primary" *ngIf="mode==1">
+      <div class="card-header"> Nouveau Contact</div>
+      <div class="card-body">
+          <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Nom</label>
+          <div class="col-sm-4">
+              <input type="text" class="form-control" [(ngModel)]="contact.nom">
+          </div>
+          </div>
+
+          <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Prenom</label>
+          <div class="col-sm-4">
+              <input type="text" class="form-control" [(ngModel)]="contact.prenom">
+          </div>
+          </div>
+
+          <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-4">
+              <input type="email" class="form-control" [(ngModel)]="contact.email">
+          </div>
+          </div>
+
+          <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Date de naissance</label>
+          <div class="col-sm-4">
+              <input type="Date" class="form-control" [(ngModel)]="contact.datenaissance">
+          </div>
+          </div>
+
+          <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Telephone</label>
+          <div class="col-sm-4">
+              <input type="number" class="form-control" [(ngModel)]="contact.telephone">
+          </div>
+          </div>
+
+         
+
+          <button  class="btn btn-primary" (click)="saveContact()">Save</button>
+
+     
+      </div>
+      
+    </div>
+
+
+    <div class="card card-primary" *ngIf="mode==2">
+            <div class="card-header"> Confirmation</div>
+            <div class="card-body">
+                    <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">ID</label>
+                        <div class="col-sm-4">
+                            <label>{{contact.id}}</label>
+                        </div>
+                        </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Nom</label>
+                <div class="col-sm-4">
+                    <label>{{contact.nom}}</label>
+                </div>
+                </div>
+      
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Prenom</label>
+                <div class="col-sm-4">
+                        <label>{{contact.prenom}}</label>                </div>
+                </div>
+      
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-4">
+                        <label>{{contact.email}}</label>                </div>
+                </div>
+      
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Date de naissance</label>
+                <div class="col-sm-4">
+                        <label>{{contact.datenaissance}}</label>                </div>
+                </div>
+      
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Telephone</label>
+                <div class="col-sm-4">
+                        <label>{{contact.telephone}}</label>                </div>
+                </div>
+                <button  class="btn btn-primary" (click)="mode=1">NouveauContact</button>
+
+               
+      
+      
+           
+            </div>
+            
+          </div>
+</div>
